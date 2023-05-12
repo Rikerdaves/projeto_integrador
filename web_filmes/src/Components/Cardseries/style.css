@@ -1,0 +1,20 @@
+.lista-colunas { 
+    columns: 5;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+img {
+    margin-left: 15px;
+    height: 280px;
+    width: 200px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+h2 {
+    margin-left: 10px;
+    font-size: 25px;
+}
