@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Cardmovie/style.css'
 
 const MovieList = () => { 
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+
+  const navigate = useNavigate();
+
 
   const apiKey = '8a78bbc2059ae1af9b5db720e9ee991d';
   
@@ -18,6 +22,7 @@ const MovieList = () => {
     setMovies([...movies, ...newMovies]);
   }
 
+  // eslint-disable-next-line
   const handleScroll = () => {
     const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
@@ -27,7 +32,7 @@ const MovieList = () => {
       setCurrentPage(currentPage + 1);
     }
   }
- 
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -35,17 +40,24 @@ const MovieList = () => {
   
 
   useEffect(() => {
-    loadMovies();
+    loadMovies();// eslint-disable-next-line
   }, [currentPage]);
 
+  const handleMovieClick = (id) => {
+    // Redirect to the movie details page
+    navigate(`/filme/${id}`);
+  }
+
   return (
-    <div class='content'>
+    <div className='content'>
       <h2>Filmes Populares</h2>
-      <ul class="lista-colunas">
+      <ul className="lista-colunas">
         {movies.map((movie) => (
-          <><li key={movie.id}></li>
+          <>
+          <li key={movie.id} ></li>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
-          alt={`Poster do filme ${movie.title}`}/></>
+          alt={`Poster do filme ${movie.title}`} onClick={() => handleMovieClick(movie.id)}/>
+          </>
         ))}
       </ul>
     </div>

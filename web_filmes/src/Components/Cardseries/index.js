@@ -39,9 +39,9 @@ const SerieList = () => {
   }, [currentPage]);
 
   return (
-    <div class='content'>
+    <div className='content'>
       <h2>Series Populares</h2>
-      <ul class="lista-colunas">
+      <ul className="lista-colunas">
         {series.map((serie) => (
           <><li key={serie.id}></li>
           <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} 

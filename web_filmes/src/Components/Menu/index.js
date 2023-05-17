@@ -1,11 +1,12 @@
 import '../Menu/style.css'
 import SearchBar from '../Searchbar';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 
 function Menu() {
     return(
-      <div class="navbar">
+      <div className="navbar">
         <nav>
           <ul>
             <li><Link to="/">Ínicio</Link></li>

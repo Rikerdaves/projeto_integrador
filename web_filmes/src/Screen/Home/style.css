@@ -1,9 +1,9 @@
 body {
-    background-color: #0b0a0a;
-    color: #d6d9d9;
+    background-color: #313131;
+    color: #ffffff;
 }
 
-.texto1{
+h1, p{
     margin: 10px;
     margin-left: 15px;
     font-size: 30px;

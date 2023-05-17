@@ -54,7 +54,7 @@ function SeriesCarousel() {
       <h2>Series populares</h2>
       <Slider {...settings} style={{ width: '85%' , margin: '0 auto' }}>
         {series.map((serie) => (
-          <div key={serie.id} class='slide'>
+          <div key={serie.id} className='slide'>
             <img src={`https://image.tmdb.org/t/p/w185${serie.poster_path}`} alt={serie.title} />
           </div>
         ))}

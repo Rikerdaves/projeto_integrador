@@ -1,4 +1,4 @@
-import '../Series/style.css'
+import '../Home/style.css';
 import SerieList from '../../Components/Cardseries';
 
 function Series() {

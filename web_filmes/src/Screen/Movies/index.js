@@ -1,4 +1,4 @@
-import '../Movies/style.css'
+import '../Home/style.css';
 import MovieList from '../../Components/Cardmovie';
 
 function Movies() {
