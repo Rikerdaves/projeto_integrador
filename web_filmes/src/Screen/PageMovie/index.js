@@ -56,7 +56,7 @@ const DetalhesFilme = () => {
       <div className="content">
         <div className="text">
           <h2 className="title">{title}</h2>
-          <p>{overview}</p>
+          <p className='overview'>{overview}</p>
         </div>
         <div className="poster-container">
           <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`Poster do filme ${title}`} className="poster" />
