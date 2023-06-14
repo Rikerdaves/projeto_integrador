@@ -1,0 +1,29 @@
+.slick-next,
+.slick-prev {
+  margin-left: -10px;
+  margin-right: -10PX;
+}
+.slider-serie .serie-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.series-carousel-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+  
+.title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+.slider-serie {
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  

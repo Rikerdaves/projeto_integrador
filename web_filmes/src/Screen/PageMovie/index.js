@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import '../PageMovie/style.css';
 
 const DetalhesFilme = () => {
@@ -43,12 +41,15 @@ const DetalhesFilme = () => {
   const { title, overview, poster_path } = filme;
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 4,
-    arrows: true
+    arrows: true,
+    customPaging: (index) => (
+      <div className="custom-dot"></div>
+    )
   };
 
   return (

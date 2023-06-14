@@ -3,6 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import '../MovieCarousel/style.css'
 
 function MovieCarousel() {
   const [movies, setMovies] = useState([]);
@@ -23,19 +24,19 @@ function MovieCarousel() {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     variableWidth: true,
     slidesToShow: 1,
-    slidesToScroll: 5,
+    slidesToScroll: 6,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           variableWidth: false,
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 2
         }
       },
       {
@@ -43,23 +44,25 @@ function MovieCarousel() {
         settings: {
           variableWidth: false,
           slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: 1
         }
       }
     ]
   };
 
   return (
-    <div>
-      <h2>Filmes populares</h2>
-      <Slider {...settings} style={{ width: '85%' , margin: '0 auto' }}>
+    <>
+    <div className="movie-carousel-container">
+      <h2 className="carousel-title">Filmes populares</h2>
+      <Slider {...settings} className="slider-container">
         {movies.map((movie) => (
-          <div key={movie.id} class='slide'>
-            <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.title} />
+          <div key={movie.id} className="slide">
+            <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.title} className="movie-poster" />
           </div>
         ))}
       </Slider>
     </div>
+    </>
   );
 }
 

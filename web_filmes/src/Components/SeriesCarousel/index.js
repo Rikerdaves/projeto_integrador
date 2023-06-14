@@ -3,6 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import '../SeriesCarousel/style.css'
 
 function SeriesCarousel() {
   const [series, setSeries] = useState([]);
@@ -23,7 +24,7 @@ function SeriesCarousel() {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     variableWidth: true,
@@ -50,12 +51,12 @@ function SeriesCarousel() {
   };
 
   return (
-    <div>
-      <h2>Series populares</h2>
-      <Slider {...settings} style={{ width: '85%' , margin: '0 auto' }}>
+    <div className='series-carousel-container'>
+      <h2 className='title'>Series populares</h2>
+      <Slider {...settings} className='serie-slider-container'>
         {series.map((serie) => (
-          <div key={serie.id} className='slide'>
-            <img src={`https://image.tmdb.org/t/p/w185${serie.poster_path}`} alt={serie.title} />
+          <div key={serie.id} className='slider-serie'>
+            <img src={`https://image.tmdb.org/t/p/w185${serie.poster_path}`} alt={serie.title} className='serie-poster'/>
           </div>
         ))}
       </Slider>

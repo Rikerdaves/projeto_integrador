@@ -1,0 +1,25 @@
+.slick-next,
+.slick-prev {
+  margin-left: -40px;
+  margin-right: -40PX;
+}
+.slide .movie-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.movie-carousel-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+  
+.carousel-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+.slide {
+    display: flex;
+    justify-content: center;
+}

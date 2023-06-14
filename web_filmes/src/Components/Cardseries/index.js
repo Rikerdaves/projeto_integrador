@@ -17,7 +17,7 @@ const SerieList = () => {
     const newSeries = await getSeries(currentPage);
     setSeries([...series, ...newSeries]);
   }
-
+// eslint-disable-next-line
   const handleScroll = () => {
     const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
@@ -35,20 +35,23 @@ const SerieList = () => {
   
 
   useEffect(() => {
-    loadSeries();
+    loadSeries(); // eslint-disable-next-line
   }, [currentPage]);
 
   return (
+    <>
+    <h2 className='titulo'>Series Populares</h2>
     <div className='content'>
-      <h2>Series Populares</h2>
-      <ul className="lista-colunas">
+      <ul className="lista-colunas-5">
         {series.map((serie) => (
-          <><li key={serie.id}></li>
+          <li key={serie.id}>
           <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} 
-          alt={`Poster do filme ${serie.title}`}/></>
+          alt={`Poster do filme ${serie.title}`}/>
+          </li>
         ))}
       </ul>
     </div>
+    </>
   );
 };
 
