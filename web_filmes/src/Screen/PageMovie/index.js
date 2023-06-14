@@ -46,8 +46,8 @@ const DetalhesFilme = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 5,
+    slidesToScroll: 4,
     arrows: true
   };
 
@@ -63,9 +63,10 @@ const DetalhesFilme = () => {
         </div>
       </div>
       <div className="image-slider">
+        <h2>Imagens do filme</h2>
         <Slider {...settings}>
           {imagens.map((imagem) => (
-            <div key={imagem.file_path} className="slide">
+            <div key={imagem.file_path} className="custom-slide">
               <img src={`https://image.tmdb.org/t/p/w500${imagem.file_path}`} alt={`Imagem do filme ${title}`} className="backdrop" />
             </div>
           ))}

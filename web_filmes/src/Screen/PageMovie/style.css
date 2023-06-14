@@ -13,7 +13,7 @@
 }
 
 .overview {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .text {
@@ -35,14 +35,19 @@
 
 .poster {
   width: auto;
-  margin-top: 20px;
-  height: 400px;
+  margin-top: 10px;
+  height: 300px;
 }
 
+.custom-slide {
+  width: 100%; /* Defina a largura desejada */
+  height: 100%; /* Defina a altura desejada */
+}
+
+
 .image-slider {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 20px;
+  width: 80%;
+  margin-top: 10px;
 }
 
 .slick-slider {
@@ -51,7 +56,7 @@
   box-sizing: border-box;
   user-select: none;
   touch-action: pan-y;
-  padding: 0 10px; /* Ajuste o valor do padding conforme necessário */
+  padding: 0 0px; /* Ajuste o valor do padding conforme necessário */
 }
 
 .slick-list {
