@@ -1,21 +1,22 @@
-.lista-colunas { 
-    columns: 5;
+.lista-colunas-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  }
+  
+  .lista-colunas-5 li {
+    cursor: pointer;
+  }
+  
+  .titulo {
+    text-align: left;
+    margin-top: 20px;
     margin-left: 20px;
-}
-
-img {
-    margin-left: 15px;
-    height: 280px;
-    width: 200px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-}
-
-h2 {
-    margin-left: 10px;
-    font-size: 25px;
-}
-
+  }
+  
+  .content {
+    padding: 0;
+    margin-left: 50px;
+  }
+  
