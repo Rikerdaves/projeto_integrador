@@ -29,7 +29,7 @@ function SeriesCarousel() {
     speed: 500,
     variableWidth: true,
     slidesToShow: 1,
-    slidesToScroll: 5,
+    slidesToScroll: 6,
     responsive: [
       {
         breakpoint: 768,
@@ -52,7 +52,7 @@ function SeriesCarousel() {
 
   return (
     <div className='series-carousel-container'>
-      <h2 className='title'>Series populares</h2>
+      <h2 className='serie-title'>Series populares</h2>
       <Slider {...settings} className='serie-slider-container'>
         {series.map((serie) => (
           <div key={serie.id} className='slider-serie'>

@@ -1,10 +1,5 @@
-.slick-next,
-.slick-prev {
-  margin-left: -40px;
-  margin-right: -40PX;
-}
 .slide .movie-poster {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 15px;
 }

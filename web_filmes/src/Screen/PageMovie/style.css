@@ -12,88 +12,6 @@
   max-width: 800px;
 }
 
-.overview {
-  font-size: 15px;
-}
-
-.text {
-  width: 80%;
-  margin-top: 50px;
-  text-align: left;
-}
-
-.title {
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-/* Estilização do Slider */
-.image-slider {
-  width: 80%;
-  margin-top: 20px;
-}
-
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  user-select: none;
-  touch-action: pan-y;
-  padding: 0;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none;
-  margin-right: 6px;
-}
-
-.slick-slide > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.custom-slide {
-  width: 100%; /* Defina a largura desejada */
-  height: 100%; /* Defina a altura desejada */
-}
-
-.backdrop {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.slick-prev,
-.slick-next {
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  padding-top: 20px; /* Ajuste o valor do padding-top conforme necessário */
-}
-
-.slick-prev {
-  left: 10px; /* Ajuste a posição da seta esquerda conforme necessário */
-}
-
-.slick-next {
-  right: 10px; /* Ajuste a posição da seta direita conforme necessário */
-}
-
 .poster-container {
   width: auto;
   display: flex;
@@ -106,4 +24,39 @@
   margin-top: 10px;
   height: 350px;
 }
+
+
+.overview {
+  font-size: 15px;
+}
+
+.text {
+  width: 80%;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* Estilização do Slider */
+.image-slider {
+  width: 85%;
+  margin-top: 20px;
+}
+
+.slick-slide {
+  margin-right: 6px;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 

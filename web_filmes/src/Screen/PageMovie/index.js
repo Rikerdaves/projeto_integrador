@@ -47,9 +47,6 @@ const DetalhesFilme = () => {
     slidesToShow: 5,
     slidesToScroll: 4,
     arrows: true,
-    customPaging: (index) => (
-      <div className="custom-dot"></div>
-    )
   };
 
   return (
