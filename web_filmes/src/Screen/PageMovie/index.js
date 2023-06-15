@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Slider from 'react-slick';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../PageMovie/style.css';
 
 const DetalhesFilme = () => {
@@ -40,21 +41,12 @@ const DetalhesFilme = () => {
 
   const { title, overview, poster_path } = filme;
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-    arrows: true,
-  };
-
   return (
     <div className="container">
       <div className="content">
         <div className="text">
           <h2 className="title">{title}</h2>
-          <p className='overview'>{overview}</p>
+          <p className="overview">{overview}</p>
         </div>
         <div className="poster-container">
           <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`Poster do filme ${title}`} className="poster" />
@@ -62,13 +54,23 @@ const DetalhesFilme = () => {
       </div>
       <div className="image-slider">
         <h2>Imagens do filme</h2>
-        <Slider {...settings}>
+        <Carousel
+          showArrows={true}
+          showThumbs={false}
+          showStatus={false}
+          infiniteLoop={true}
+          centerMode={true}
+          centerSlidePercentage={33.3333}
+          autoPlay={false}
+          emulateTouch={true}
+          showIndicators={false}
+        >
           {imagens.map((imagem) => (
             <div key={imagem.file_path} className="custom-slide">
               <img src={`https://image.tmdb.org/t/p/w500${imagem.file_path}`} alt={`Imagem do filme ${title}`} className="backdrop" />
             </div>
           ))}
-        </Slider>
+        </Carousel>
       </div>
     </div>
   );
