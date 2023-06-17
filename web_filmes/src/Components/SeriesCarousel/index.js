@@ -56,7 +56,8 @@ function SeriesCarousel() {
       <Slider {...settings} className='serie-slider-container'>
         {series.map((serie) => (
           <div key={serie.id} className='slider-serie'>
-            <img src={`https://image.tmdb.org/t/p/w185${serie.poster_path}`} alt={serie.title} className='serie-poster'/>
+            <img src={`https://image.tmdb.org/t/p/w185${serie.poster_path}`} 
+            alt={serie.title} className='serie-poster'/>
           </div>
         ))}
       </Slider>

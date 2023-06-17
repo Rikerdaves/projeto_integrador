@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Cardseries/style.css'
 
 const SerieList = () => { 
   const [series, setSeries] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+
+  const navigate = useNavigate();
 
   const apiKey = '8a78bbc2059ae1af9b5db720e9ee991d';
   
@@ -38,6 +41,11 @@ const SerieList = () => {
     loadSeries(); // eslint-disable-next-line
   }, [currentPage]);
 
+  const handleMovieClick = (id) => {
+    navigate(`/serie/${id}`);
+  };
+
+
   return (
     <>
     <h2 className='titulo'>Series Populares</h2>
@@ -46,7 +54,9 @@ const SerieList = () => {
         {series.map((serie) => (
           <li key={serie.id}>
           <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} 
-          alt={`Poster do filme ${serie.title}`}/>
+          alt={`Poster do filme ${serie.title}`}
+          onClick={() => handleMovieClick(serie.id)}
+          />
           </li>
         ))}
       </ul>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -7,6 +8,8 @@ import '../MovieCarousel/style.css'
 
 function MovieCarousel() {
   const [movies, setMovies] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchMovies() {
@@ -50,6 +53,10 @@ function MovieCarousel() {
     ]
   };
 
+  const handleMovieClick = (id) => {
+    navigate(`/filme/${id}`);
+  };
+
   return (
     <>
     <div className="movie-carousel-container">
@@ -57,7 +64,9 @@ function MovieCarousel() {
       <Slider {...settings} className="slider-container">
         {movies.map((movie) => (
           <div key={movie.id} className="slide">
-            <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.title} className="movie-poster" />
+            <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} 
+            alt={movie.title} className="movie-poster"
+            onClick={() => handleMovieClick(movie.id)} />
           </div>
         ))}
       </Slider>

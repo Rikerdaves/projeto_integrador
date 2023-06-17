@@ -8,16 +8,16 @@ import Movies from './Screen/Movies';
 import Series from './Screen/Series';
 import Footer from './Components/Footer/footer';
 import DetalhesFilme from './Screen/PageMovie';
+import DetalhesSerie from './Screen/PageSerie';
 
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulando uma operação assíncrona
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Defina o tempo necessário para a sua operação de carregamento
+    }, 3000);
   }, []);
 
   return (
@@ -40,6 +40,7 @@ function App() {
                   <Route path="/Movies" element={<Movies />} />
                   <Route path="/Series" element={<Series />} />
                   <Route path="/filme/:id" element={<DetalhesFilme />} />
+                  <Route path="/serie/:id" element={<DetalhesSerie />} />
                 </Routes>
                 <Footer />
               </div>
