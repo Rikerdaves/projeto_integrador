@@ -1,7 +1,8 @@
-.slider-serie .serie-poster {
+.serie-poster {
   width: 100%;
   height: auto;
   border-radius: 15px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .series-carousel-container {
@@ -23,4 +24,8 @@
 .slider-serie {
   display: flex;
   justify-content: center;
+}
+
+.serie-poster:hover {
+  filter: brightness(45%);
 }
