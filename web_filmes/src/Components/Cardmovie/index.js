@@ -46,9 +46,9 @@ const MovieList = () => {
 
   return (
       <>
-      <h2 className="titulo">Filmes Populares</h2>
-      <div className='content'>
-      <ul className="lista-colunas-5">
+      <h2 className="titulo-movies">Filmes Populares</h2>
+      <div className='content-movies'>
+      <ul className="lista-movies-colunas-5">
         {movies.map((movie) => (
           <li key={movie.id}>
             <img

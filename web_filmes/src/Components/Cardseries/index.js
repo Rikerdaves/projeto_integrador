@@ -48,13 +48,13 @@ const SerieList = () => {
 
   return (
     <>
-    <h2 className='titulo'>Series Populares</h2>
-    <div className='content'>
-      <ul className="lista-colunas-5">
+    <h2 className='titulo-series'>Series Populares</h2>
+    <div className='content-series'>
+      <ul className="lista-series-colunas-5">
         {series.map((serie) => (
           <li key={serie.id}>
           <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} 
-          alt={`Poster do filme ${serie.title}`}
+          alt={`Poster da serie ${serie.title}`}
           onClick={() => handleMovieClick(serie.id)}
           />
           </li>
