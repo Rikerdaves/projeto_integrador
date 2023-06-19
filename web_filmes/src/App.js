@@ -9,6 +9,7 @@ import Series from './Screen/Series';
 import Footer from './Components/Footer/footer';
 import DetalhesFilme from './Screen/PageMovie';
 import DetalhesSerie from './Screen/PageSerie';
+import ResultPage from './Screen/Results';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/Series" element={<Series />} />
                   <Route path="/filme/:id" element={<DetalhesFilme />} />
                   <Route path="/serie/:id" element={<DetalhesSerie />} />
+                  <Route path="/search/:query" element={<ResultPage />} /> 
                 </Routes>
                 <Footer />
               </div>
