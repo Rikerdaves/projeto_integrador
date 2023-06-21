@@ -1,10 +1,11 @@
 import '../Menu/style.css'
 import SearchBar from '../Searchbar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import React from 'react';
 import axios from 'axios';
 
 function Menu({ isLoggedIn, username, handleLogout }) {
+  const location = useLocation();
 
   const handleLogoutClick = async () => {
     try {
@@ -22,6 +23,10 @@ function Menu({ isLoggedIn, username, handleLogout }) {
       console.error('Erro ao fazer logout', error);
     }
   };
+  if (location.pathname === '/login') {
+    return null; // Não renderizar o menu
+  }
+
   return (
     <div className="navbar">
       <nav>
