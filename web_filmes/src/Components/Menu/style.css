@@ -34,3 +34,19 @@ nav a:hover {
 .btn-series {
   margin-right: 10px;
 }
+
+.btn-logout {
+  margin-left: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(224, 224, 224);
+  background-color: #3f3f3f;
+}
+
+.login-section {
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}

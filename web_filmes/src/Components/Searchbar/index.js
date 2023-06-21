@@ -17,14 +17,15 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='form-search' onSubmit={handleSubmit}>
       <input
+        className='pesquisa'
         type="text"
         value={query}
         onChange={handleChange}
         placeholder="Pesquisar..."
       />
-      <button type="submit">Buscar</button>
+      <button className='btn-busca' type="submit">Buscar</button>
     </form>
   );
 };
