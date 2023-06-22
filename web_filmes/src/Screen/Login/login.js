@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Login/style.css'
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const login = async (username, password) => {
     try {
@@ -13,6 +15,7 @@ function Login({ onLogin }) {
       localStorage.setItem('token', token);
       onLogin();
       console.log('Login bem-sucedido')
+      navigate('/');
     } catch (error) {
       console.error('Erro ao fazer login', error);
       // Trate o erro de acordo com sua necessidade
